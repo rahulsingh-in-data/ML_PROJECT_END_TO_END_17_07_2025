@@ -1,0 +1,272 @@
+[2025-07-17 13:38:32,701 - INFO - mlproject package initialized.]
+[2025-07-17 13:39:46,448 - INFO - mlproject package initialized.]
+[2025-07-17 13:41:08,985 - INFO - main - mlproject package initialized.]
+[2025-07-18 19:38:44,272 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:38:44,272 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:38:44,272 - ERROR - main - Argument file_path of type <class 'pathlib._local.PosixPath'> to <function read_yaml at 0x10132d120> does not match annotation type <class 'str'>]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 12, in __init__
+    self.config = read_yaml(config_file_path)
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 870, in __call__
+    raise EnsureError(msg.format(arg=arg, f=self.f, t=templ, valt=type(value)))
+ensure.main.EnsureError: Argument file_path of type <class 'pathlib._local.PosixPath'> to <function read_yaml at 0x10132d120> does not match annotation type <class 'str'>
+[2025-07-18 19:43:19,528 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:43:19,529 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:43:19,529 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:43:19,530 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:43:19,530 - ERROR - main - Empty YAML structure in file: params.yaml]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/utils/common.py", line 19, in read_yaml
+    return ConfigBox(content)
+  File "box/box.py", line 295, in box.box.Box.__init__
+box.exceptions.BoxValueError: First argument must be mapping or iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 13, in __init__
+    self.params = read_yaml(str(params_file_path))
+                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 872, in __call__
+    return_val = self.f(*args, **kwargs)
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/utils/common.py", line 21, in read_yaml
+    raise ValueError(f"Empty YAML structure in file: {file_path}")
+ValueError: Empty YAML structure in file: params.yaml
+[2025-07-18 19:43:51,521 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:43:51,521 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:43:51,521 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:43:51,521 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:43:51,521 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:43:51,521 - INFO - common - Directory created at: artifacts]
+[2025-07-18 19:43:51,522 - ERROR - main - isinstance() arg 2 must be a type, a tuple of types, or a union]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 16, in __init__
+    create_directories([self.config.artifacts_root])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+[2025-07-18 19:49:36,549 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:49:36,549 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:49:36,549 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:49:36,550 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:49:36,550 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:49:36,550 - ERROR - main - isinstance() argument 2 cannot be a parameterized generic]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 16, in __init__
+    create_directories([self.config.artifacts_root])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 868, in __call__
+    if not isinstance(value, templ):
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+TypeError: isinstance() argument 2 cannot be a parameterized generic
+[2025-07-18 19:52:39,494 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:52:39,494 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:52:39,495 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:52:39,495 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:52:39,495 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:52:39,495 - ERROR - main - Subscripted generics cannot be used with class and instance checks]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 16, in __init__
+    create_directories([self.config.artifacts_root])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 868, in __call__
+    if not isinstance(value, templ):
+           ~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/typing.py", line 1375, in __instancecheck__
+    return self.__subclasscheck__(type(obj))
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/typing.py", line 1378, in __subclasscheck__
+    raise TypeError("Subscripted generics cannot be used with"
+                    " class and instance checks")
+TypeError: Subscripted generics cannot be used with class and instance checks
+[2025-07-18 19:54:44,031 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:54:44,031 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:54:44,031 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:54:44,032 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:54:44,032 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:54:44,032 - INFO - common - Directory created at: artifacts]
+[2025-07-18 19:54:44,032 - ERROR - main - isinstance() arg 2 must be a type, a tuple of types, or a union]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 16, in __init__
+    create_directories([self.config.artifacts_root])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+[2025-07-18 19:55:50,691 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:55:50,691 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:55:50,691 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:55:50,692 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:55:50,692 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:55:50,692 - INFO - common - Directory created at: artifacts]
+[2025-07-18 19:55:50,692 - ERROR - main - isinstance() arg 2 must be a type, a tuple of types, or a union]
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 13, in main
+    config = ConfigurationManager()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 16, in __init__
+    create_directories([self.config.artifacts_root])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/.venv/lib/python3.13/site-packages/ensure/main.py", line 873, in __call__
+    if not isinstance(return_val, self.return_templ):
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: isinstance() arg 2 must be a type, a tuple of types, or a union
+[2025-07-18 19:56:07,122 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:56:07,122 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:56:07,122 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:56:07,122 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:56:07,122 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:56:07,122 - INFO - common - Directory created at: artifacts]
+[2025-07-18 19:56:07,122 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-18 19:56:07,122 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-18 19:56:07,123 - ERROR - main - type object 'Request' has no attribute 'urlretrieve']
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_ingestion.py", line 18, in download_file
+    filename, headers = Request.urlretrieve(
+                        ^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'Request' has no attribute 'urlretrieve'
+[2025-07-18 19:59:25,274 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 19:59:25,274 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 19:59:25,274 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 19:59:25,274 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 19:59:25,274 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 19:59:25,274 - INFO - common - Directory created at: artifacts]
+[2025-07-18 19:59:25,274 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-18 19:59:25,274 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-18 19:59:25,393 - ERROR - main - <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 1319, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              encode_chunked=req.has_header('Transfer-encoding'))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1338, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1384, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/http/client.py", line 1479, in connect
+    self.sock = self._context.wrap_socket(self.sock,
+                ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+                                          server_hostname=server_hostname)
+                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sock=sock,
+        ^^^^^^^^^^
+    ...<5 lines>...
+        session=session
+        ^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 1076, in _create
+    self.do_handshake()
+    ~~~~~~~~~~~~~~~~~^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/ssl.py", line 1372, in do_handshake
+    self._sslobj.do_handshake()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 12, in <module>
+    data_ingestion.main()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_01_data_ingestion.py", line 16, in main
+    data_ingestion.download_file()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_ingestion.py", line 18, in download_file
+    filename, headers = urlretrieve(
+                        ~~~~~~~~~~~^
+        url = self.config.source_url,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        filename = self.config.local_data_file
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 214, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ~~~~~~~^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 489, in open
+    response = self._open(req, data)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 1367, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/urllib/request.py", line 1322, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1028)>
+[2025-07-18 20:02:36,636 - INFO - main - Welcome to Custom Logging]
+[2025-07-18 20:02:36,636 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-18 20:02:36,637 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-18 20:02:36,637 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-18 20:02:36,638 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-18 20:02:36,638 - INFO - common - Directory created at: artifacts]
+[2025-07-18 20:02:36,638 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-18 20:02:36,638 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-18 20:02:37,647 - INFO - data_ingestion - Downloaded file: artifacts/data_ingestion/data.zip]
+[2025-07-18 20:02:37,652 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-18 20:02:37,652 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
