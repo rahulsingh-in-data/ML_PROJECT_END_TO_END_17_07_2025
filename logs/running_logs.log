@@ -281,3 +281,368 @@ urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certifica
 [2025-07-18 20:25:34,704 - INFO - data_ingestion - Downloaded file: artifacts/data_ingestion/data.zip]
 [2025-07-18 20:25:34,707 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
 [2025-07-18 20:25:34,707 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 01:58:04,651 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 01:58:04,653 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 01:58:04,655 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 01:58:04,655 - INFO - common - Directory created at: artifacts]
+[2025-07-19 02:25:27,840 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 02:25:27,840 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 02:25:27,841 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 02:25:27,841 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 02:25:27,841 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 02:25:27,842 - INFO - common - Directory created at: artifacts]
+[2025-07-19 02:25:27,842 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 02:25:27,842 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 02:25:27,842 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 02:25:27,843 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 02:25:27,843 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 02:25:27,843 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 02:25:27,843 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 02:25:27,843 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 02:25:27,844 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 02:25:27,844 - INFO - common - Directory created at: artifacts]
+[2025-07-19 02:25:27,844 - ERROR - main - "'ConfigBox' object has no attribute 'data_validation'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'data_validation'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'data_validation'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 24, in <module>
+    data_validation.main()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 38, in get_data_validation_config
+    schema = self.schema.data_validation
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'data_validation'"
+[2025-07-19 02:29:10,978 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 02:29:10,978 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 02:29:10,979 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 02:29:10,979 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 02:29:10,980 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 02:29:10,980 - INFO - common - Directory created at: artifacts]
+[2025-07-19 02:29:10,980 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 02:29:10,980 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 02:29:10,980 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 02:29:10,980 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 02:29:10,980 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 02:29:10,980 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 02:29:10,981 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 02:29:10,981 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 02:29:10,981 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 02:29:10,981 - INFO - common - Directory created at: artifacts]
+[2025-07-19 02:29:10,982 - INFO - common - Directory created at: artifacts/data_validation]
+[2025-07-19 02:29:10,982 - ERROR - main - "'ConfigBox' object has no attribute 'source_url'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 24, in <module>
+    data_validation.main()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 44, in get_data_validation_config
+    source_url=config.source_url,
+               ^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+[2025-07-19 12:34:41,262 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 12:34:41,262 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:34:41,263 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:34:41,263 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:34:41,264 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:34:41,264 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:34:41,264 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:34:41,264 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:34:41,264 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 12:34:41,265 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 12:34:41,265 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:34:41,265 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:34:41,265 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:34:41,265 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:34:41,266 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:34:41,266 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:34:41,266 - INFO - common - Directory created at: artifacts/data_validation]
+[2025-07-19 12:34:41,266 - ERROR - main - "'ConfigBox' object has no attribute 'source_url'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/config_box.py", line 29, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "box/box.py", line 633, in box.box.Box.__getattr__
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'source_url'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "box/box.py", line 635, in box.box.Box.__getattr__
+AttributeError: 'ConfigBox' object has no attribute 'source_url'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 24, in <module>
+    data_validation.main()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 44, in get_data_validation_config
+    source_url=config.source_url,
+               ^^^^^^^^^^^^^^^^^
+  File "box/config_box.py", line 31, in box.config_box.ConfigBox.__getattr__
+  File "box/box.py", line 649, in box.box.Box.__getattr__
+box.exceptions.BoxKeyError: "'ConfigBox' object has no attribute 'source_url'"
+[2025-07-19 12:51:05,997 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 12:51:05,998 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:51:05,998 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:51:05,999 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:51:06,000 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:51:06,000 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:51:06,000 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:51:06,000 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:51:06,000 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 12:51:06,001 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 12:51:06,001 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:51:06,001 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:51:06,001 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:51:06,001 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:51:06,002 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:51:06,002 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:51:06,002 - INFO - common - Directory created at: artifacts/data_validation]
+[2025-07-19 12:51:06,002 - ERROR - main - DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE']
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 24, in <module>
+    data_validation.main()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_02_data_validation.py", line 14, in main
+    data_validation_config = config.get_data_validation_config()
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/config/configuration.py", line 42, in get_data_validation_config
+    data_validation_config = DataValidationConfig(
+        root_dir=config.root_dir,
+    ...<2 lines>...
+        all_schema=schema
+    )
+TypeError: DataValidationConfig.__init__() got an unexpected keyword argument 'STATUS_FILE'
+[2025-07-19 12:54:40,977 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 12:54:40,977 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:54:40,977 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:54:40,978 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:54:40,979 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:54:40,979 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:54:40,979 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:54:40,979 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:54:40,979 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 12:54:40,980 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 12:54:40,980 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:54:40,980 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:54:40,981 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:54:40,981 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:54:40,981 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:54:40,981 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:54:40,981 - INFO - common - Directory created at: artifacts/data_validation]
+[2025-07-19 12:54:40,984 - ERROR - data_validation - Exception occurred during data validation: 'DataValidationConfig' object has no attribute 'all_Schema']
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_validation.py", line 18, in validate_all_columns
+    expected_cols = list(self.config.all_Schema["COLUMNS"].keys())
+                         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidationConfig' object has no attribute 'all_Schema'. Did you mean: 'all_schema'?
+[2025-07-19 12:54:40,984 - ERROR - main - 'DataValidationConfig' object has no attribute 'all_Schema']
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 24, in <module>
+    data_validation.main()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_validation.py", line 38, in validate_all_columns
+    raise e
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_validation.py", line 18, in validate_all_columns
+    expected_cols = list(self.config.all_Schema["COLUMNS"].keys())
+                         ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataValidationConfig' object has no attribute 'all_Schema'. Did you mean: 'all_schema'?
+[2025-07-19 12:56:03,524 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 12:56:03,524 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:56:03,524 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:56:03,525 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:56:03,526 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:56:03,526 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:56:03,526 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:56:03,526 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 12:56:03,526 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 12:56:03,527 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 12:56:03,527 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:56:03,527 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 12:56:03,528 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 12:56:03,528 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 12:56:03,528 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 12:56:03,528 - INFO - common - Directory created at: artifacts]
+[2025-07-19 12:56:03,528 - INFO - common - Directory created at: artifacts/data_validation]
+[2025-07-19 12:56:03,531 - ERROR - data_validation - Exception occurred during data validation: "'COLUMNS'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'COLUMNS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_validation.py", line 18, in validate_all_columns
+    expected_cols = list(self.config.all_schema["COLUMNS"].keys())
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'COLUMNS'"
+[2025-07-19 12:56:03,531 - ERROR - main - "'COLUMNS'"]
+Traceback (most recent call last):
+  File "box/box.py", line 594, in box.box.Box.__getitem__
+KeyError: 'COLUMNS'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/main.py", line 24, in <module>
+    data_validation.main()
+    ~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/pipeline/stage_02_data_validation.py", line 16, in main
+    data_validation.validate_all_columns()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_validation.py", line 38, in validate_all_columns
+    raise e
+  File "/Users/rahulsinghindata/AI-ML/ML_PROJECT_END_TO_END_17_07_2025/src/mlproject/components/data_validation.py", line 18, in validate_all_columns
+    expected_cols = list(self.config.all_schema["COLUMNS"].keys())
+                         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "box/box.py", line 621, in box.box.Box.__getitem__
+box.exceptions.BoxKeyError: "'COLUMNS'"
+[2025-07-19 13:04:48,892 - INFO - main - Welcome to Custom Logging]
+[2025-07-19 13:04:48,893 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 13:04:48,893 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 13:04:48,894 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 13:04:48,895 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 13:04:48,895 - INFO - common - Directory created at: artifacts]
+[2025-07-19 13:04:48,895 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 13:04:48,895 - INFO - common - Directory created at: artifacts/data_ingestion]
+[2025-07-19 13:04:48,895 - INFO - data_ingestion - File already exists at artifacts/data_ingestion/data.zip]
+[2025-07-19 13:04:48,896 - INFO - data_ingestion - Extracted files to artifacts/data_ingestion]
+[2025-07-19 13:04:48,896 - INFO - main - >>>>>>>>>>>>>>>>>> Data Ingestion Stage completed <<<<<<<<<<<<<<<<<]
+[2025-07-19 13:04:48,896 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage started <<<<<<<<<<<<<<<<<]
+[2025-07-19 13:04:48,896 - INFO - common - Successfully read YAML file at config/config.yaml]
+[2025-07-19 13:04:48,896 - INFO - common - Successfully read YAML file at params.yaml]
+[2025-07-19 13:04:48,897 - INFO - common - Successfully read YAML file at schema.yaml]
+[2025-07-19 13:04:48,897 - INFO - common - Directory created at: artifacts]
+[2025-07-19 13:04:48,897 - INFO - common - Directory created at: artifacts/data_validation]
+[2025-07-19 13:04:48,899 - INFO - main - >>>>>>>>>>>>>>>>>> Data Validation Stage completed <<<<<<<<<<<<<<<<<]
